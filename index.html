@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilmer Betin | Full Stack Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: #e2e8f0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: #cbd5f5;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+    background: linear-gradient(90deg, #22c55e, #4ade80);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #94a3b8;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #22c55e;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid #22c55e;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3>Wilmer.dev</h3>
+    <div>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#architecture">Arquitectura</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#skills">Skills</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Wilmer Betin</h1>
+
+    <p>
+        Desarrollador Full Stack con experiencia en Laravel y desarrollo de APIs REST.
+        Manejo frameworks modernos como Vue, React y Angular.
+    </p>
+
+    <p style="margin-top:10px; color:#22c55e;">
+        Laravel • Vue • React • Angular • Tailwind • Bootstrap • AWS
+    </p>
+
+    <p style="margin-top:10px; color:#22c55e;">
+        +3 proyectos reales | Backend + Frontend | Deploy en AWS
+    </p>
+
+    <a href="https://wa.me/57TU_NUMERO" class="btn">Contáctame</a>
+    <a href="https://github.com/TU_USUARIO" target="_blank" class="btn">Ver GitHub</a>
+</section>
+
+<section id="about" class="fade">
+    <h2>Sobre mí</h2>
+    <p>
+        Desarrollador enfocado en soluciones reales: sistemas de inventario,
+        plataformas sociales y apps en tiempo real. Experiencia en despliegue en AWS.
+    </p>
+</section>
+
+<section id="projects" class="fade">
+    <h2>Proyectos</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Consulta Colombia Mayor</h3>
+            <p>Consulta en tiempo real de beneficiarios.</p>
+            <a href="https://www.chinucolombiamayor.com/chinu/colombia-mayor/consulta" target="_blank" class="btn">Ver Proyecto</a>
+        </div>
+
+        <div class="card">
+            <h3>Panel de Administración</h3>
+            <p>Login seguro y gestión de usuarios.</p>
+            <a href="https://www.chinucolombiamayor.com/login" target="_blank" class="btn">Ver Sistema</a>
+        </div>
+
+        <div class="card">
+            <h3>Cronograma de Pagos</h3>
+            <p>Sistema de fechas y seguimiento de subsidios.</p>
+            <a href="#" class="btn">Ver Módulo</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="architecture" class="fade">
+    <h2>Arquitectura & Buenas Prácticas</h2>
+
+    <div class="grid">
+        <div class="card"><h3>MVC</h3><p>Separación de lógica.</p></div>
+        <div class="card"><h3>DTO</h3><p>Optimización de datos.</p></div>
+        <div class="card"><h3>APIs REST</h3><p>Comunicación eficiente.</p></div>
+        <div class="card"><h3>Laravel Breeze</h3><p>Autenticación segura.</p></div>
+        <div class="card"><h3>AWS</h3><p>Deploy en la nube.</p></div>
+    </div>
+</section>
+
+<section id="experience" class="fade">
+    <h2>Casos Reales</h2>
+
+    <div class="grid">
+        <div class="card"><h3>Inventario</h3><p>Stock, ventas y facturación.</p></div>
+        <div class="card"><h3>Turnero</h3><p>Sistema en tiempo real.</p></div>
+        <div class="card"><h3>Plataforma Social</h3><p>Consulta segura.</p></div>
+        <div class="card"><h3>Cronogramas</h3><p>Gestión de pagos.</p></div>
+    </div>
+</section>
+
+<section id="skills" class="fade">
+    <h2>Tecnologías & Estilos</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, JS, Vue, React, Angular</p>
+        </div>
+
+        <div class="card">
+            <h3>UI / Estilos</h3>
+            <p>Tailwind CSS, Bootstrap, Animaciones, Responsive Design</p>
+        </div>
+
+        <div class="card">
+            <h3>Backend</h3>
+            <p>Laravel, PHP, APIs REST, MVC, DTO</p>
+        </div>
+
+        <div class="card">
+            <h3>Base de Datos</h3>
+            <p>MySQL</p>
+        </div>
+
+        <div class="card">
+            <h3>Herramientas</h3>
+            <p>Git, GitHub, VS Code</p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud</h3>
+            <p>AWS (S3, CloudFront)</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Wilmer Betin</p>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add('visible');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
