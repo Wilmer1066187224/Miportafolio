@@ -8,6 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -15,6 +21,7 @@ body {
     color: #e2e8f0;
 }
 
+/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
@@ -23,14 +30,33 @@ nav {
     background: rgba(0,0,0,0.3);
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 nav a {
     color: #cbd5f5;
     text-decoration: none;
     margin-left: 20px;
+    position: relative;
 }
 
+/* EFECTO NAV */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #22c55e;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
 .hero {
     height: 90vh;
     display: flex;
@@ -52,6 +78,7 @@ nav a {
     color: #94a3b8;
 }
 
+/* BOTONES */
 .btn {
     margin-top: 15px;
     padding: 12px 30px;
@@ -68,10 +95,12 @@ nav a {
     transform: scale(1.05);
 }
 
+/* SECCIONES */
 section {
-    padding: 80px 40px;
+    padding: 100px 40px;
     max-width: 1100px;
     margin: auto;
+    scroll-margin-top: 100px; /* SOLUCION CLAVE */
 }
 
 h2 {
@@ -80,12 +109,14 @@ h2 {
     color: #22c55e;
 }
 
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
+/* CARDS */
 .card {
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(15px);
@@ -100,12 +131,14 @@ h2 {
     border: 1px solid #22c55e;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 30px;
     color: #64748b;
 }
 
+/* ANIMACION */
 .fade {
     opacity: 0;
     transform: translateY(30px);
@@ -116,6 +149,7 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
 </style>
 </head>
 
